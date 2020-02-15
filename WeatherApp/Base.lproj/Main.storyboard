@@ -76,15 +76,18 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oiw-9Y-F5O">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="oiw-9Y-F5O">
                                         <rect key="frame" x="0.0" y="690" width="414" height="128"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frf-qV-2cU">
-                                                <rect key="frame" x="0.0" y="34.666666666666629" width="414" height="59"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="33"/>
                                                 <state key="normal" title="Refresh">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgz-FI-qLe"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -100,6 +103,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="appearentTemperatureLabel" destination="6lj-ji-ph9" id="HBw-k7-sQg"/>
+                        <outlet property="humidityLabel" destination="7vV-wJ-zbW" id="cPC-42-cre"/>
+                        <outlet property="imageView" destination="WYB-m9-Tnf" id="YaT-GT-nfB"/>
+                        <outlet property="locationLabel" destination="2sg-BH-awU" id="KPu-Kn-z3s"/>
+                        <outlet property="pressureLabel" destination="cDw-jl-eWb" id="BPE-Wg-xhZ"/>
+                        <outlet property="refreshButton" destination="Frf-qV-2cU" id="xFO-hV-quD"/>
+                        <outlet property="temperatureLabel" destination="Iae-Fz-szV" id="mLO-bl-qut"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
