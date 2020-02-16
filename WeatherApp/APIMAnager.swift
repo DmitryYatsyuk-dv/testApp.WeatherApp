@@ -25,10 +25,8 @@ protocol APIManager {
     
     
     func fetch<T>(request: URLRequest,
-                  parse: ([String: AnyObject]?) -> T?,
-                  completionHandler: (APIResult<T>) -> Void)
-    
-    init(sessionConfiguration: URLSessionConfiguration)
+                  parse: @escaping ([String: AnyObject]?) -> T?,
+                  completionHandler: @escaping (APIResult<T>) -> Void)
     
 }
 
