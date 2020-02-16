@@ -15,6 +15,7 @@
 		3249468E23F8923F00794667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3249468C23F8923F00794667 /* LaunchScreen.storyboard */; };
 		3249469623F8A94900794667 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249469523F8A94900794667 /* CurrentWeather.swift */; };
 		3249469823F8AA0B00794667 /* WeatherIconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249469723F8AA0B00794667 /* WeatherIconManager.swift */; };
+		32B95C3123F94C0600F81F40 /* APIMAnager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B95C3023F94C0500F81F40 /* APIMAnager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3249468F23F8923F00794667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3249469523F8A94900794667 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		3249469723F8AA0B00794667 /* WeatherIconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconManager.swift; sourceTree = "<group>"; };
+		32B95C3023F94C0500F81F40 /* APIMAnager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMAnager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3249468323F8923D00794667 /* SceneDelegate.swift */,
 				3249468523F8923D00794667 /* ViewController.swift */,
 				3249469523F8A94900794667 /* CurrentWeather.swift */,
+				32B95C3023F94C0500F81F40 /* APIMAnager.swift */,
 				3249469723F8AA0B00794667 /* WeatherIconManager.swift */,
 				3249468723F8923E00794667 /* Main.storyboard */,
 				3249468A23F8923F00794667 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 				3249468223F8923D00794667 /* AppDelegate.swift in Sources */,
 				3249469823F8AA0B00794667 /* WeatherIconManager.swift in Sources */,
 				3249469623F8A94900794667 /* CurrentWeather.swift in Sources */,
+				32B95C3123F94C0600F81F40 /* APIMAnager.swift in Sources */,
 				3249468423F8923D00794667 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
