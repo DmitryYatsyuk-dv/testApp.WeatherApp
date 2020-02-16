@@ -29,7 +29,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-AY-Usj">
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="B6h-AY-Usj">
                                         <rect key="frame" x="0.0" y="138" width="414" height="128"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="230" verticalHuggingPriority="230" image="clear-day" translatesAutoresizingMaskIntoConstraints="NO" id="WYB-m9-Tnf">
@@ -60,7 +60,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34˚C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-Fz-szV">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="130"/>
-                                                <color key="textColor" red="0.90735577562033154" green="1" blue="0.62519095850098905" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -94,7 +94,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.71306284519305074" green="0.95666636384774728" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.58910357433404592" green="0.92768480329949243" blue="0.92252784416939237" alpha="0.9201359160958904" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TzM-bp-RPM" secondAttribute="bottom" id="TL6-3o-H21"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TzM-bp-RPM" secondAttribute="trailing" id="fIR-ZA-OQO"/>
@@ -119,6 +119,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clear-day" width="83.333335876464844" height="83.333335876464844"/>
+        <image name="clear-day" width="83" height="83"/>
     </resources>
 </document>

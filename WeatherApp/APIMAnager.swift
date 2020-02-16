@@ -83,19 +83,20 @@ extension APIManager {
                   completionHandler: @escaping (APIResult<T>) -> Void) {
         
         let dataTask = JSONTaskWith(request: request) { (json, response, error) in
-            
-            guard let json = json else {
-                if let error = error {
+            DispatchQueue.main.async(execute: {
+                guard let json = json else {
+                    if let error = error {
+                        completionHandler(.Failure(error))
+                    }
+                    return
+                }
+                if let value = parse(json) {
+                    completionHandler(.Success(value))
+                } else {
+                    let error = NSError(domain: YATNetworkingErrorDomain, code: 200, userInfo: nil)
                     completionHandler(.Failure(error))
                 }
-                return
-            }
-            if let value = parse(json) {
-                completionHandler(.Success(value))
-            } else {
-                let error = NSError(domain: YATNetworkingErrorDomain, code: 200, userInfo: nil)
-                completionHandler(.Failure(error))
-            }
+            }) 
         }
         dataTask.resume()
     }

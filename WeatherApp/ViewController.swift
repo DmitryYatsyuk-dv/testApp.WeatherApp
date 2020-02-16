@@ -22,38 +22,64 @@ class ViewController: UIViewController {
         
     }
     
+    lazy var weatherManager = APIWeatherManager(apiKey: "ac4e92fe2a7ea43d78391631b7064bc7")
+    let coordinates = Coordinates(latitude: 55.797145, longitude: 37.612893)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        weatherManager.fetchCurrentWeatherWith(coordinates: coordinates) { (result) in
+            switch result {
+            case .Success(let currentWeather):
+                self.updaitUIWith(currentWeather: currentWeather)
+            case .Failure(let error as NSError):
+                self.callAlertController(title: "Unable to get data",
+                                    message: "\(error.localizedDescription)",
+                                    error: error)
+            }
+        }
+    }
+        
+    func callAlertController(title: String, message: String, error: NSError) {
+        
+        let alertController = UIAlertController(title: "",
+                                                message: "",
+                                                preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+    }
+    
+        /*
         // Create icon
         let icon = WeatherIconManager.Rain.image
         
         // Call the initializer
         let currentWeather = CurrentWeather.init(temperature: 10.0, apparentTemperature: 5.0, humidity: 30, pressure: 750, icon: icon)
+        */
         
-        updaitUIWith(currentWeather: currentWeather)
+        /*
+        // let urlString = "https://api.darksky.net/forecast/ac4e92fe2a7ea43d78391631b7064bc7/37.8267,-122.4233"
+        // Create URL-Address (FixedPart1 - baseURL),(VariablePart)
+        let baseURL = URL(string: "https://api.darksky.net/forecast/ac4e92fe2a7ea43d78391631b7064bc7/")
         
-//        // let urlString = "https://api.darksky.net/forecast/ac4e92fe2a7ea43d78391631b7064bc7/37.8267,-122.4233"
-//       
-//        // Create URL-Address (FixedPart1 - baseURL),(VariablePart)
-//        let baseURL = URL(string: "https://api.darksky.net/forecast/ac4e92fe2a7ea43d78391631b7064bc7/")
-//        
-//        let fullURL = URL(string: "37.8267,-122.4233", relativeTo: baseURL)
-//        
-//        // Create session settings
-//        let sessionConfiguration = URLSessionConfiguration.default
-//        let session = URLSession(configuration: sessionConfiguration)
-//         
-//        // Create request - this is the wrong code to compare
-//        let request = URLRequest(url: fullURL!)
-//        let dataTask = session.dataTask(with: fullURL!) { (data, response, error) in
-//    
-//        }
-//        dataTask.resume()
+        let fullURL = URL(string: "37.8267,-122.4233", relativeTo: baseURL)
         
-    }
-
+        // Create session settings
+        let sessionConfiguration = URLSessionConfiguration.default
+        let session = URLSession(configuration: sessionConfiguration)
+         
+        // Create request - this is the wrong code to compare
+        let request = URLRequest(url: fullURL!)
+        let dataTask = session.dataTask(with: fullURL!) { (data, response, error) in
+    
+        }
+        dataTask.resume()
+        */
+    
     func updaitUIWith(currentWeather: CurrentWeather) {
         
         self.imageView.image = currentWeather.icon
