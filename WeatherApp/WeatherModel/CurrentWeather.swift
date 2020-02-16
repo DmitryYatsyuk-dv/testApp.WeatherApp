@@ -21,9 +21,9 @@ struct CurrentWeather {
 extension CurrentWeather: JSONDecodable {
     init?(JSON: [String : AnyObject]) {
         guard let temperature = JSON["temperature"] as? Double,
-        let apparentTemperature = JSON["apparentTemperature"] as? Double,
-        let humidity = JSON["humidity"] as? Double,
-        let pressure = JSON["pressure"] as? Double,
+            let apparentTemperature = JSON["apparentTemperature"] as? Double,
+            let humidity = JSON["humidity"] as? Double,
+            let pressure = JSON["pressure"] as? Double,
             let iconString = JSON["icon"] as? String else {
                 return nil
         }
@@ -40,10 +40,10 @@ extension CurrentWeather: JSONDecodable {
 extension CurrentWeather {
     
     var pressureString: String {
-        return "\(Int(pressure * 0.750062)) mm"
+        return "\(Int(pressure * 0.750062))mm"
     }
     var humidityString: String {
-        return "\(Int(humidity * 100)) %"
+        return "\(Int(humidity * 100))%"
     }
     var temperatureString: String {
         return "\(Int(5 / 9 * (temperature - 32)))˚C"

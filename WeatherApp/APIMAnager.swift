@@ -35,8 +35,8 @@ protocol APIManager {
     
     
     func fetch<T: JSONDecodable>(request: URLRequest,
-                  parse: @escaping ([String: AnyObject]) -> T?,
-                  completionHandler: @escaping (APIResult<T>) -> Void)
+                                 parse: @escaping ([String: AnyObject]) -> T?,
+                                 completionHandler: @escaping (APIResult<T>) -> Void)
 }
 
 extension APIManager {
