@@ -76,7 +76,6 @@
 				3249468323F8923D00794667 /* SceneDelegate.swift */,
 				3249468523F8923D00794667 /* ViewController.swift */,
 				32B95C3423F95E9F00F81F40 /* WeatherModel */,
-				32B95C3223F95E7D00F81F40 /* ErrorManager.swift */,
 				32B95C3723F9EC7300F81F40 /* ParticlesView.swift */,
 				32B95C3923F9ED6000F81F40 /* ParticleScene.sks */,
 				3249468723F8923E00794667 /* Main.storyboard */,
@@ -92,6 +91,7 @@
 			children = (
 				3249469523F8A94900794667 /* CurrentWeather.swift */,
 				3249469723F8AA0B00794667 /* WeatherIconManager.swift */,
+				32B95C3223F95E7D00F81F40 /* ErrorManager.swift */,
 			);
 			path = WeatherModel;
 			sourceTree = "<group>";

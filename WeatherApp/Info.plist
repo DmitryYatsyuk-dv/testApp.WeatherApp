@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>weather.app wants to know , where are you.c</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Weather.app always needs to know where are you.</string>
 	<key>CFBundleDevelopmentRegion</key>
